@@ -9,11 +9,7 @@ connectDB();
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-    origin: 'https://user-authentication-system-5njf2glq5.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    credentials: true, // If you're using cookies
-  }));
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRoutes);
 
