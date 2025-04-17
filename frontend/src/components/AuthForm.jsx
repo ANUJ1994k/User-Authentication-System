@@ -45,7 +45,7 @@ const AuthForm = () => {
     const endpoint = isLogin ? 'login' : 'register';
 
     try {
-      const res = await axios.post(`http://localhost:5000/api/auth/${endpoint}`, values);
+      const res = await axios.post(`https://user-authentication-system-rzdj.onrender.com/api/auth/${endpoint}`, values);
       setServerMsg(`✅ ${isLogin ? 'Login' : 'Registration'} successful!`);
       console.log('Response:', res.data);
     } catch (err) {

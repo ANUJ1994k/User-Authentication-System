@@ -77,7 +77,7 @@ exports.forgotPassword = async (req, res) => {
   user.resetTokenExpire = resetTokenExpire;
   await user.save();
 
-  const resetUrl = `http://localhost:3000/reset-password/${resetToken}`;
+  const resetUrl = `https://user-authentication-system-rzdj.onrender.com/reset-password/${resetToken}`;
 
   // Send email with reset URL
   const message = `You requested a password reset. Click the link below to reset your password:\n\n${resetUrl}`;

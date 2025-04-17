@@ -9,7 +9,7 @@ const ResetPassword = ({ match }) => {
     const token = match.params.token;
 
     try {
-      await axios.post('http://localhost:5000/api/auth/reset-password', { token, newPassword });
+      await axios.post('https://user-authentication-system-rzdj.onrender.com/api/auth/reset-password', { token, newPassword });
       alert('Password has been reset!');
     } catch (err) {
       alert('Failed to reset password');
