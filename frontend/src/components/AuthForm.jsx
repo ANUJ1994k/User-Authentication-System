@@ -97,7 +97,7 @@ const AuthForm = () => {
                         <option value="">Select</option>
                         <option value="male">male</option>
                         <option value="female">female</option>
-                        <option value="other">others</option>
+                        <option value="other">other</option>
                       </Field>
                       <ErrorMessage name="gender" component="div" className="text-danger" />
                     </div>
