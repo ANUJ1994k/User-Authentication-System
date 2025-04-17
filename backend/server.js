@@ -9,7 +9,13 @@ connectDB();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+const allowedOrigins = ['https://user-authentication-system-navy.vercel.app'];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true, // if using cookies or auth headers
+}));
+
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRoutes);
 
